@@ -33,7 +33,6 @@ public class TC_001_LoginTest extends BaseClass {
 		
 		logout.logoutFromApplication();
 		
-		logger.info("User is able to logoff");
 	}
 	
 	
