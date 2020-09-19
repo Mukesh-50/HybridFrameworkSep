@@ -7,6 +7,7 @@ import com.learnautomation.dataprovider.ExcelReader;
 import com.learnautomation.helper.BaseClass;
 import com.learnautomation.pages.LoginPage;
 import com.learnautomation.pages.LogoutPage;
+import com.learnautomation.pages.User;
 
 public class TC_002_RegistrationTest extends BaseClass {
 	
@@ -24,10 +25,20 @@ public class TC_002_RegistrationTest extends BaseClass {
 		
 	}
 	
-	@Test(priority=1,dependsOnMethods="loginAsAdmin")
+	@Test(priority=1)
+	public void createUser()
+	{
+		logger=report.createTest("Create User Test");
+		User user=PageFactory.initElements(driver, User.class);
+		user.createUser();
+		logger.info("User is able to create user");
+	}
+	
+	
+	@Test(priority=2,dependsOnMethods="loginAsAdmin")
 	public void logoutFromApplication()
 	{
-		logger=report.createTest("Logout Test");
+		logger=report.createTest("Create User");
 	
 		LogoutPage logout=PageFactory.initElements(driver, LogoutPage.class);
 		
