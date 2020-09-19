@@ -60,7 +60,7 @@
 				</systemPropertyVariables>
 				
 					<suiteXmlFiles>
-						<suiteXmlFile>XMLFiles\{xmlFiles}</suiteXmlFile>
+						<suiteXmlFile>XMLFiles\${xmlFiles}</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
