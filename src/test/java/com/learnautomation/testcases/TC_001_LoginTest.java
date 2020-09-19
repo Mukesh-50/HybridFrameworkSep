@@ -22,7 +22,6 @@ public class TC_001_LoginTest extends BaseClass {
 		
 		logger.info("User is able to login");
 		
-		
 	}
 	
 	@Test(priority=1,dependsOnMethods="loginAsAdmin")

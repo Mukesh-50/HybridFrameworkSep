@@ -8,6 +8,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -44,12 +45,16 @@ public class BaseClass {
 		
 	}
 	
+	@Parameters({"Browser","URL"})
 	@BeforeClass
-	public void startSession()
+	public void startSession(String browser,String url)
 	{
 		System.out.println("LOG:INFO- Setting up the Browser");
 		
-		driver=BrowserFactory.startApplication(new ConfigReader().getValue("Browser"),new ConfigReader().getValue("stagingURL"));
+		//driver=BrowserFactory.startApplication(new ConfigReader().getValue("Browser"),new ConfigReader().getValue("stagingURL"));
+		
+		driver=BrowserFactory.startApplication(browser,url);
+
 		
 		System.out.println("LOG:INFO- Browser and Application is up and running");
 	}
