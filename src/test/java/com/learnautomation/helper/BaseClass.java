@@ -49,7 +49,7 @@ public class BaseClass {
 	@BeforeClass
 	public void startSession(String browser,String url)
 	{
-		System.out.println("LOG:INFO- Setting up the Browser");
+		System.out.println("LOG:INFO- Setting up the Browser "+browser +" "+url);
 		
 		//driver=BrowserFactory.startApplication(new ConfigReader().getValue("Browser"),new ConfigReader().getValue("stagingURL"));
 		
