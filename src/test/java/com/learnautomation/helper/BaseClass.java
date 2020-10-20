@@ -20,7 +20,8 @@ import com.learnautomation.factory.BrowserFactory;
 
 public class BaseClass {
 
-	public ExtentReports report;
+	// make report object static
+	public static ExtentReports report;
 	public WebDriver driver;
 	public ExtentTest logger;
 
