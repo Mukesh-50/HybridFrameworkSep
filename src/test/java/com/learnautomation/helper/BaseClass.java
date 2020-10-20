@@ -29,8 +29,11 @@ public class BaseClass {
 	{
 		System.out.println("LOG:INFO- Setting up the report");
 		
-		ExtentSparkReporter sparkReporter=new ExtentSparkReporter(System.getProperty("user.dir")+"/Reports/AutomationReport"+Utility.getCurrentTime()+".html");
+		//ExtentSparkReporter sparkReporter=new ExtentSparkReporter(System.getProperty("user.dir")+"/Reports/AutomationReport"+Utility.getCurrentTime()+".html");
 
+		ExtentSparkReporter sparkReporter=new ExtentSparkReporter(System.getProperty("user.dir")+"/Reports/AutomationReport.html");
+
+		
 		sparkReporter.config().setDocumentTitle("Automation Report");
 		
 		sparkReporter.config().setReportName("Test Automation Report Sprint 2");
