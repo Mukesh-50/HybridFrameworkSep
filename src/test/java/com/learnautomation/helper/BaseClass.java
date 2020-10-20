@@ -32,7 +32,6 @@ public class BaseClass {
 		//ExtentSparkReporter sparkReporter=new ExtentSparkReporter(System.getProperty("user.dir")+"/Reports/AutomationReport"+Utility.getCurrentTime()+".html");
 
 		ExtentSparkReporter sparkReporter=new ExtentSparkReporter(System.getProperty("user.dir")+"/Reports/AutomationReport.html");
-
 		
 		sparkReporter.config().setDocumentTitle("Automation Report");
 		
